@@ -147,3 +147,5 @@ A **Flask-based web application** provides an interactive interface for translat
 ### Screenshot
 
 ![Web App Screenshot](./assets/app_screenshot.png)
+
+![Web App Screenshot](./assets/app_screenshot_2.png)
