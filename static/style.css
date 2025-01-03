@@ -1,0 +1,234 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef0f2;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    background: #283048; 
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .nav-left h1 {
+    font-size: 1.2em; /* Slightly smaller to prevent overlap */
+    margin: 0;
+  }
+  
+  .nav-left span {
+    margin: 0 3px;
+  }
+  
+  .nav-right a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9em;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  
+  .nav-right a:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #b8c6db 0%, #f5f7fa 100%);
+    padding: 25px 20px;
+    text-align: center;
+  }
+  .hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .hero-content h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #283048;
+  }
+  .hero-content p {
+    font-size: 1em;
+    color: #444;
+  }
+  
+  /* CONTAINER & CARD */
+  .container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto 40px; /* No negative margin */
+    flex: 1;
+  }
+  .card {
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* HEADINGS */
+  .card h2 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #283048;
+  }
+  
+  /* INPUT AREA */
+  .input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  textarea {
+    flex: 1;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    transition: border 0.2s;
+  }
+  textarea:focus {
+    outline: none;
+    border-color: #5b9bd5;
+  }
+  
+  /* Voice Button */
+  .voice-btn {
+    background: #fff;
+    border: 2px solid #5b9bd5;
+    color: #5b9bd5;
+    font-size: 1.2em;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .voice-btn:hover {
+    background: #5b9bd5;
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
+  /* Translate Button */
+  .translate-btn {
+    background: #5b9bd5;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  .translate-btn:hover {
+    background: #4d88c2;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  }
+  
+  /* OUTPUT */
+  #output h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+    color: #283048;
+  }
+  
+  #translatedText {
+    margin-top: 5px;
+    min-height: 40px;
+    padding: 10px;
+    background: #f7f9fc;
+    border-radius: 4px;
+    font-weight: 500;
+    border: 1px solid #ddd;
+  }
+  
+  /* TABLE CARD */
+  .table-card {
+    margin-top: 20px;
+  }
+  
+  /* HISTORY TABLE */
+  .history-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .history-table thead {
+    background: #283048;
+    color: #fff;
+  }
+  .history-table th,
+  .history-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    font-size: 0.9em;
+    text-align: center;
+  }
+  .history-table th {
+    font-weight: 600;
+  }
+  
+  .delete-btn {
+    background: #ff6464;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+  .delete-btn:hover {
+    background: #eb4c4c;
+  }
+  
+  /* FOOTER */
+  footer {
+    background: #283048;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.8em;
+    margin-top: auto;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .nav-left h1 {
+      font-size: 1em;
+    }
+    .hero-content h2 {
+      font-size: 1.4em;
+    }
+    .input-area {
+      flex-direction: column;
+    }
+    .voice-btn {
+      width: 45px;
+      height: 45px;
+      margin-top: 5px;
+    }
+    .translate-btn {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  

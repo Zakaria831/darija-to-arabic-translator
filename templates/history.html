@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Translation History</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <!-- Smaller font so it won't overlap -->
+      <h1>Darija <span>↔</span> Arabic</h1>
+    </div>
+    <div class="nav-right">
+      <a href="{{ url_for('home') }}">Home</a>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTAINER -->
+  <div class="container">
+    <!-- Full heading (no inline style) -->
+    <h2>Translation History</h2>
+    <div class="card table-card">
+      <table class="history-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Darija (Input)</th>
+            <th>Arabic (Output)</th>
+            <th>Created At</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in rows %}
+          <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td>
+              <a href="{{ url_for('delete_record', record_id=row[0]) }}" class="delete-btn">Delete</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Darija ↔ Arabic Translator</p>
+  </footer>
+
+</body>
+</html>

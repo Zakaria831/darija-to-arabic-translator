@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Darija ↔ Arabic</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <h1>Darija <span>↔</span> Arabic</h1>
+    </div>
+    <div class="nav-right">
+      <a href="{{ url_for('history') }}">History</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Darija to Arabic Translator</h2>
+      <p>Easily convert Darija text or speech into standard Arabic.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTAINER -->
+  <div class="container">
+    <div class="card translator-card">
+      <h2>Translation</h2>
+      <div class="input-area">
+        <textarea id="inputText" rows="5" placeholder="Enter your Darija text..."></textarea>
+        <button id="voiceButton" class="voice-btn">🎤</button>
+      </div>
+
+      <button id="translateButton" class="translate-btn">Translate</button>
+      <div id="output">
+        <h3>Result:</h3>
+        <p id="translatedText">Your translation will appear here.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Darija ↔ Arabic Translator</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
